@@ -7,12 +7,13 @@ public class Example {
 		hello("Mark");
 		hello("Anna");
 
-		double l = 5;
-		System.out.println("Ploschad kvadrata so storonoi " + l + " = " + area(l));
+		Square s = new Square(5);
 
-		double a = 4;
-		double b = 6;
-		System.out.println("Ploschad pryamougolnika so storonami " + a + " i " + b + " = " + area(a,b));
+		System.out.println("Ploschad kvadrata so storonoi " + s.l + " = " + area(s));
+
+		Rectangle r = new Rectangle(4, 6);
+
+		System.out.println("Ploschad pryamougolnika so storonami " + r.a + " i " + r.b + " = " + area(r));
 		}
 
 
@@ -21,11 +22,11 @@ public class Example {
 		System.out.println("Hello " + somebody + "!");
 	}
 
-	public static double area(double len) {
-	    return len *  len;
+	public static double area(Square s) {
+	    return s.l *  s.l;
 	}
 
-	public static double area(double a, double b) {
-		return a * b;
+	public static double area(Rectangle r) {
+		return r.a * r.b;
 }
 }
