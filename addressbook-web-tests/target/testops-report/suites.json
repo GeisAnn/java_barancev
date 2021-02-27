@@ -1,0 +1,12 @@
+{
+  "suites" : [ {
+    "uuid" : "1b5885c6-c028-4672-b82f-d9f6cb7a6cfb",
+    "parentUuid" : "2581f3ba-2a0e-4c17-9a60-7970285c5c44",
+    "name" : "Default Suite",
+    "start" : 1613406311749,
+    "stop" : 1613406311869,
+    "duration" : 120,
+    "thread" : "11328@9500T.main(1)",
+    "host" : "9500T"
+  } ]
+}
