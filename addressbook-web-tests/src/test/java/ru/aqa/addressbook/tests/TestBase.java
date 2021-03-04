@@ -1,5 +1,6 @@
 package ru.aqa.addressbook.tests;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import ru.aqa.addressbook.appmanager.ApplicationManager;
