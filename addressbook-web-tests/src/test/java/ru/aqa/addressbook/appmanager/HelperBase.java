@@ -28,4 +28,8 @@ public class HelperBase {
       return false;
     }
   }
+
+  protected void alert() {
+    driver.switchTo().alert().accept();
+  }
 }
