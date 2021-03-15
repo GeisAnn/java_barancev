@@ -1,12 +1,13 @@
 package ru.aqa.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.aqa.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase{
 
-  public ContactHelper(FirefoxDriver driver) {
+  public ContactHelper(WebDriver driver) {
     super(driver);
   }
 
@@ -23,7 +24,7 @@ public class ContactHelper extends HelperBase{
 
   public void deleteSelectedContact() {
 
-    click(By.xpath("//input[@value='Delete']"));
+    click(By.xpath("//input[@value='Delete']")); 
     alert();
   }
 
