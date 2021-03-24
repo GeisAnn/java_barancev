@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.aqa.addressbook.model.ContactData;
+import ru.aqa.addressbook.model.GroupData;
 
 public class ContactHelper extends HelperBase{
 
@@ -16,6 +17,10 @@ public class ContactHelper extends HelperBase{
 
   public void submitContactCreation() {
     click(By.name("submit"));
+  }
+
+  public void initContactCreation() {
+    click(By.linkText("add new"));
   }
 
   public void fillContactForm(ContactData contactData, boolean creation) {
@@ -39,7 +44,7 @@ public class ContactHelper extends HelperBase{
   }
 
   public void selectContact() {
-    click(By.id("4"));
+    click(By.name("selected[]"));
   }
 
   public void initContactModification() {
@@ -50,4 +55,15 @@ public class ContactHelper extends HelperBase{
     click(By.xpath("(//input[@name='update'])[2]"));
   }
 
- }
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
+
+  public void createContact(ContactData contact, boolean creation) {
+    initContactCreation();
+    fillContactForm(contact, creation);
+    submitContactCreation();
+
+  }
+}

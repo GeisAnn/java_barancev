@@ -16,8 +16,4 @@ app.getGroupHelper().createGroup(new GroupData("test1", null, null));
     app.getGroupHelper().deleteSelectedGroups();
     app.getGroupHelper().returnToGroupPage();
   }
-
-
-
-
 }

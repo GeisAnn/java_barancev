@@ -18,8 +18,5 @@ public class TestBase {
   @AfterMethod
   public void tearDown() {
     app.stop();
-
   }
-
-
 }

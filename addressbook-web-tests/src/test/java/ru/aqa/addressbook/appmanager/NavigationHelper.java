@@ -21,10 +21,10 @@ return;
 }
 
 
-  public void goToContactForm() {
+  public void goToHomepage() {
     if (isElementPresent(By.id("maintable"))) {
       return;
     }
-    click(By.linkText("add new"));
+    click(By.linkText("home"));
   }
 }
